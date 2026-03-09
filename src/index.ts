@@ -1,7 +1,10 @@
 import express from "express";
 
-const app = express();
+// resolving the cors error
+import cors from "cors";
 
+const app = express();
+app.use(cors()); // this allows all origins
 function randomArray() {
     const mini = 10;
     const maxi = 100;
